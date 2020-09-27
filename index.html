@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+   <head>
+   <!--ALL IMAGES USED BELONG TO DISNEY ENTERPRISES -->
+      <meta charset="utf-8">
+      <title>Favourite Disney Characters</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="scripts.js"></script>
+   </head>
+   <body>
+      <header>
+         <h1>Your favourite Disney Characters</h1>
+         <button id="navigationButton" onclick="displayLinks()" onmouseover="mouseOverNav()" onmouseout="mouseOutNav()">Disney Websites</button>
+         <nav class="hide" id="expandingMenu">
+            <a class="subMenu" href="https://www.thewaltdisneycompany.com/" target="_blank" >The Walt Disney Company </a>
+            <a class="subMenu" href="https://www.shopdisney.co.uk/" target="_blank" >Disney Store</a>
+         </nav>
+      </header>
+      <main>
+         <section class="flex">
+            <section id="rateDisney">
+               <h2>Do you like Disney?</h2>
+               <form action="https://webdevcit.com/displayvalues.php" onsubmit="return false;">
+                  <label for="likeDisney">Tell us how much!</label><br><br>
+                  <input type="range" min="0" max="100" id="likeDisney" onchange="slide()">
+                  <span id="opinion"> Move the slider to show your rating </span><br>
+               </form>
+               <h3>Try to make Donald Duck dance!</h3>
+               <br>
+               <img src="images/donald_right.png" alt="Donald Duck" id="pic" onmouseover="mouseOverImage()" onmouseout="mouseOutImage()">
+            </section>
+            <section id="favCharacter">
+               <h2>Who is your favourite Disney character?</h2>
+               <form action="https://webdevcit.com/displayvalues.php">
+                  <label for="name">Select a character from the dropdown list:</label>	
+                  <select id="name" name="name">
+                     <option>Please select a character</option>
+                     <option>Donald Duck</option>
+                     <option>Minnie Mouse</option>
+                     <option>Snow White</option>
+                     <option>Maleficient</option>
+                     <option>Pinocchio</option>
+                  </select>
+               </form>
+               <button type="submit" id="submit" onclick="outputData()">Submit</button>					
+               <p>The character you entered was : <span id="characterName"></span> </p>
+               <img src="images/disney_characters.jpg" id="allCharacters" alt="Disney Characters" >
+               <button id="demo" onclick="myRandom()">Click to see what Disney Character you get!</button>
+            </section>
+         </section>
+         <section id="bio">
+            <article id="bioDetails">
+               <h2>Character Name: <span id="disneyName"></span></h2>
+               <p>Movie: <span id="movie"></span> </p>
+               <p>Best Friend: <span id="bestFriend"></span> </p>
+               <p>Arch Nemesis: <span id="archNemesis"></span> </p>
+               <p>Significant Other: <span id="sigOther"></span> </p>
+               <p>Favourite Saying: <span id="favouriteSaying"></span> </p>
+            </article>
+            <article id="characterPic">
+               <img src="images/disney.jpg " alt="Disney Characters" id="character">
+            </article>
+         </section>
+      </main>
+	    <footer>
+         <details>
+            <summary>All images used are subject to copyright&copy;Copyright 2019 Disney Enterprises. All Rights Reserved</summary>
+         </details>
+      </footer>
+
+   </body>
+</html>
